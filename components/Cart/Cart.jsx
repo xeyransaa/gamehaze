@@ -8,7 +8,7 @@ const Cart = forwardRef(({ closeCart }, ref) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalQuantity = cartItems.reduce((sum, i) => sum + i.quantity, 0);
   const totalPrice = cartItems.reduce(
-    (sum, i) => sum + (i.quantity * (i.price*100))/100,
+    (sum, i) => sum + i.quantity * i.price,
     0
   );
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ const Cart = forwardRef(({ closeCart }, ref) => {
           {cartItems.map((i) => (
             <CartItem key={i.id} gameId={i.id} />
           ))}
-          <h2 className="font-bold mb-5">Total price: ${totalPrice}</h2>
+          <h2 className="font-bold mb-5">Total price: ${totalPrice.toFixed(2)}</h2>
           <a
             href="/cart"
             className="text-white mr-[15px] bg-yel font-semibold hover:bg-black hover:border-black transition-all duration-200 py-[10px] px-[20px] outline-none text-[14px]"

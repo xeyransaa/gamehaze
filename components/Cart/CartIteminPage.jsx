@@ -52,7 +52,7 @@ const CartIteminPage = ({ gameId }) => {
             <div className="quantity text-[14px] ">
               {gameInCart.quantity} x ${game.discountedPrice}
             </div>
-            <div>${totalGamePrice}</div>
+            <div>${totalGamePrice.toFixed(2)}</div>
           </div>
           <div className="flex quantity-change items-center gap-[10px] mr-[20px]">
             <button

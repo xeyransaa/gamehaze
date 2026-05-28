@@ -8,7 +8,7 @@ const Cart = forwardRef(({ closeCart }, ref) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalQuantity = cartItems.reduce((sum, i) => sum + i.quantity, 0);
   const totalPrice = cartItems.reduce(
-    (sum, i) => sum + i.quantity * i.price,
+    (sum, i) => sum + (i.quantity * (i.price*100))/100,
     0
   );
   const dispatch = useDispatch();

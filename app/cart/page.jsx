@@ -53,7 +53,7 @@ const CartPage = () => {
                 </ul>
 
                 <h2 className="font-bold text-[30px] mb-5">
-                  Total price: ${totalPrice}
+                  Total price: ${totalPrice.toFixed(2)}
                 </h2>
                 <button
                   onClick={() => router.push("/checkout")}

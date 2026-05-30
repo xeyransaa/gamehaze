@@ -7,8 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "GameHaze - Game Center",
+  icons: {
+    icon: '/logo-black.PNG'
+  },
   description: "Game website",
   visualViewport: "width=device-width, initial-scale=1.0",
+
 };
 
 export default function RootLayout({ children }) {

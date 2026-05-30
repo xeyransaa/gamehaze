@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa6";
 
 const Footer = () => {
+  const year = new Date.getFullYear();
   return (
     <footer>
       <div className="top-footer bg-[#111111] px-[1.154rem] md:px-[2.308rem] min-[1200px]:px-[15px] py-[70px]">
@@ -222,7 +223,7 @@ const Footer = () => {
                 />
               </a>
               <p className="text-[13px] m-[15px]">
-                Copyright © 2018 GameHaze - All rights reserved.
+                Copyright © {year} GameHaze - All rights reserved.
               </p>
             </div>
           </div>

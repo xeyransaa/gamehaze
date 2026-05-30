@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaAmazon,
   FaApple,
@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa6";
 
 const Footer = () => {
-  const year = new Date.getFullYear();
+  const year = new Date().getFullYear();
   return (
     <footer>
       <div className="top-footer bg-[#111111] px-[1.154rem] md:px-[2.308rem] min-[1200px]:px-[15px] py-[70px]">
